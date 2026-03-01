@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PatternPal - AI Tailor for Sewing Patterns</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="background-glow"></div>
+    <div class="craft-icons" aria-hidden="true">
+      <img
+        class="craft-icon icon-tape"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4cf.svg"
+        alt=""
+        loading="lazy"
+        decoding="async"
+      />
+      <img
+        class="craft-icon icon-scissors"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2702.svg"
+        alt=""
+        loading="lazy"
+        decoding="async"
+      />
+      <img
+        class="craft-icon icon-thread"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f9f5.svg"
+        alt=""
+        loading="lazy"
+        decoding="async"
+      />
+      <img
+        class="craft-icon icon-pin"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f9f7.svg"
+        alt=""
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+    <main class="shell">
+      <div class="top-nav-row">
+        <nav class="top-tabs" aria-label="Page mode">
+          <button id="tab-judges" class="tab-btn active" type="button">For Judges</button>
+          <button id="tab-tool" class="tab-btn" type="button">Try The Tool</button>
+        </nav>
+        <div class="social-links" aria-label="Profile links">
+          <a
+            class="social-link"
+            href="https://github.com/your-username"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub profile"
+            title="GitHub"
+          >
+            <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+              <path
+                fill="currentColor"
+                d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49C4 14.09 3.48 13.22 3.32 12.76c-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.52 7.52 0 0 1 8 3.73a7.5 7.5 0 0 1 2.01.27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+              />
+            </svg>
+          </a>
+          <a
+            class="social-link"
+            href="https://www.linkedin.com/in/your-profile"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn profile"
+            title="LinkedIn"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path
+                fill="currentColor"
+                d="M20.45 20.45h-3.56v-5.58c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.27 2.38 4.27 5.48v6.26zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77A1.77 1.77 0 0 0 0 1.77v20.46C0 23.2.8 24 1.77 24h20.46A1.77 1.77 0 0 0 24 22.23V1.77A1.77 1.77 0 0 0 22.23 0z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <section id="panel-judges" class="tab-panel active" aria-live="polite">
+        <header class="hero">
+          <p class="eyebrow">Wealthsimple AI Builders Application - Mandy Britanico</p>
+          <h1>PatternPal: Your AI Tailor</h1>
+          <p class="subtitle">
+            This project helps home sewists tailor patterns to their body before cutting expensive fabric.
+          </p>
+        </header>
+
+        <section class="panel judge-video-panel">
+          <h2>Demo Video (Private YouTube)</h2>
+          <p class="hint">
+            Add your YouTube embed link here before submission so judges can watch a full walkthrough.
+          </p>
+          <div class="video-frame-wrap">
+            <iframe
+              id="judges-demo-video"
+              src="https://www.youtube.com/embed/VIDEO_ID"
+              title="PatternPal Demo Walkthrough"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p class="hint">Replace <code>VIDEO_ID</code> with your private YouTube video ID.</p>
+        </section>
+
+        <section class="panel">
+          <h2>Problem And Baseline Workflow</h2>
+          <p class="hint">
+            Garment fitting is the highest-friction step in home sewing, especially for beginners.
+          </p>
+          <ol class="judge-list">
+            <li>Sewist buys a commercial pattern and picks a size from a static chart.</li>
+            <li>They sew a test garment (muslin) to find fit problems.</li>
+            <li>They manually pin, slash/spread, and redraw pattern pieces.</li>
+            <li>They repeat until fit is acceptable, often across multiple rounds.</li>
+          </ol>
+          <p class="hint">
+            This process is slow, technical, and error-prone, which creates a high dropout point for new makers.
+          </p>
+        </section>
+
+        <section class="panel">
+          <h2>AI Decision Workflow </h2>
+          <p class="hint">
+            PatternPal reframes fitting as an AI-tailored decision workflow instead of trial-and-error.
+          </p>
+          <ol class="judge-list">
+            <li>User selects a real pattern and enters measurements once.</li>
+            <li>AI selects a starting size by comparing body measurements to pattern chart measurements.</li>
+            <li>AI recommends where to alter and by how much (chest, waist, hip, sleeve, shoulder, length).</li>
+            <li>UI renders plain instructions, visual highlights, and lookup terms for execution.</li>
+            <li>User finalizes the plan by approving suggestions or entering custom muslin findings.</li>
+          </ol>
+        </section>
+
+        <section class="panel">
+          <h2>Human / AI Operating Boundary</h2>
+          <div class="boundary-grid">
+            <article class="boundary-card">
+              <h3>AI Responsibilities</h3>
+              <ol class="judge-list">
+                <li>Fit inference: choose base size and propose alteration magnitudes.</li>
+                <li>Decision support: rank recommendations and provide confidence.</li>
+                <li>Communication: convert fitting logic into beginner-safe guidance.</li>
+              </ol>
+            </article>
+            <article class="boundary-card">
+              <h3>Human Responsibilities</h3>
+              <ol class="judge-list">
+                <li>Provide and verify measurements.</li>
+                <li>Approve, reject, or override each adjustment.</li>
+                <li>Own final construction choices and garment outcome.</li>
+              </ol>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>AI Responsibility Under Uncertainty</h2>
+          <ol class="judge-list">
+            <li>Every recommendation is tied to explicit measurement mismatch signals.</li>
+            <li>Confidence is surfaced so users can judge recommendation strength.</li>
+            <li>Human approval is mandatory before any plan is treated as final.</li>
+            <li>When certainty is weaker, the system biases toward smaller, safer edits.</li>
+          </ol>
+        </section>
+
+        <section class="panel">
+          <h2>Failure Modes And Mitigations</h2>
+          <ol class="judge-list">
+            <li>Input errors: validation blocks impossible measurements.</li>
+            <li>Outlier bodies or style mismatches: confidence drops and guidance becomes conservative.</li>
+            <li>Model disagreement with real fitting: user can override and add custom adjustments.</li>
+            <li>Decision traceability: approvals, rejections, and overrides are saved for audit and learning.</li>
+          </ol>
+        </section>
+
+        <section class="panel">
+          <h2>Learning Loop And Scale Path</h2>
+          <ol class="judge-list">
+            <li>Per-user memory stores accepted, rejected, and custom adjustments.</li>
+            <li>Outcome feedback (thumbs + muslin count) updates confidence behavior over time.</li>
+            <li>Pattern-specific data can be expanded into trained fit models as labeled volume grows.</li>
+            <li>Operational monitoring can track confidence drift and override rates at scale.</li>
+          </ol>
+        </section>
+
+        <section class="panel">
+          <h2>Outcome And Impact</h2>
+          <ol class="judge-list">
+            <li>Reduces iteration time from fitting guesswork to guided first-pass adjustments.</li>
+            <li>Lowers skill barriers by translating technical fitting into actionable language.</li>
+            <li>Improves confidence and completion rates for new sewists.</li>
+            <li>Supports more local, made-to-fit wardrobes and less fast-fashion dependence.</li>
+          </ol>
+          <div class="disclaimer">
+            Prototype note: this MVP uses expert-authored heuristics plus synthetic historical fit data.
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Next-Phase Features</h2>
+          <p class="hint">
+            The current MVP focuses on fit decision support. The next phase extends this into full pattern automation.
+          </p>
+          <ol class="judge-list">
+            <li>Upload real commercial pattern files (PDF/DXF) directly into the app.</li>
+            <li>Automatically map pattern piece geometry and detect editable adjustment zones.</li>
+            <li>Apply AI-generated fit changes directly to pattern pieces, not just recommendations.</li>
+            <li>Export print-ready altered patterns (A4/US Letter/tiled or large-format copy shop PDF).</li>
+            <li>Generate a build sheet showing each change and where it was applied for traceability.</li>
+          </ol>
+        </section>
+      </section>
+
+      <div id="panel-tool" class="tab-panel">
+        <header class="hero">
+          <p class="eyebrow">Wealthsimple AI Builders Application - Mandy Britanico</p>
+          <h1>PatternPal: Your AI Tailor</h1>
+          <p class="subtitle">
+            Turn size charts + measurements into AI-tailored fit recommendations with explainable,
+            human-approved plans.
+          </p>
+          <div class="disclaimer">
+            Prototype note: this MVP uses expert-authored rules and synthetic historical
+            fit records for demonstration.
+          </div>
+        </header>
+
+        <section id="step-profile" class="panel step-page">
+          <h2>1) Build A Fit Profile</h2>
+          <form id="fit-form" novalidate>
+            <div class="grid two align-end">
+              <label>
+                Pattern
+                <select id="pattern" name="pattern" required></select>
+              </label>
+              <figure class="pattern-preview">
+                <img id="pattern-image" src="" alt="Selected sewing pattern illustration" />
+                <figcaption id="pattern-caption"></figcaption>
+              </figure>
+            </div>
+            <label class="unit-select">
+              Measurement Units
+              <select id="unit-system" name="unit-system">
+                <option value="in" selected>Inches</option>
+                <option value="cm">Centimeters</option>
+              </select>
+            </label>
+
+            <p id="pattern-hint" class="hint"></p>
+
+            <div class="grid three">
+              <label>
+                <span class="field-title" data-unit-base="Full Bust">Full Bust (in)</span>
+                <input id="bust" name="bust" type="number" step="0.25" required />
+              </label>
+              <label>
+                <span class="field-title" data-unit-base="High Bust">High Bust (in)</span>
+                <input id="highBust" name="highBust" type="number" step="0.25" required />
+              </label>
+              <label>
+                <span class="field-title" data-unit-base="Waist">Waist (in)</span>
+                <input id="waist" name="waist" type="number" step="0.25" required />
+              </label>
+              <label>
+                <span class="field-title" data-unit-base="Full Hip">Full Hip (in)</span>
+                <input id="hip" name="hip" type="number" step="0.25" required />
+              </label>
+              <label>
+                <span class="field-title" data-unit-base="Bicep">Bicep (in)</span>
+                <input id="bicep" name="bicep" type="number" step="0.25" required />
+              </label>
+              <label>
+                <span class="field-title" data-unit-base="Shoulder Width">Shoulder Width (in)</span>
+                <input id="shoulder" name="shoulder" type="number" step="0.25" required />
+              </label>
+              <label>
+                <span class="field-title" data-unit-base="Back Waist Length">Back Waist Length (in)</span>
+                <input id="backWaistLength" name="backWaistLength" type="number" step="0.25" required />
+              </label>
+              <label>
+                <span class="field-title" data-unit-base="Height">Height (in)</span>
+                <input id="height" name="height" type="number" step="0.25" required />
+              </label>
+            </div>
+
+            <button id="analyze-btn" type="submit">Analyze Fit Plan</button>
+          </form>
+          <p id="form-error" class="error" aria-live="polite"></p>
+        </section>
+
+        <section id="step-review" class="panel hidden step-page" aria-live="polite">
+          <h2>2) Review AI Recommendation</h2>
+          <div class="kpis">
+            <article class="kpi">
+              <p class="label">Suggested Base Size</p>
+              <p id="kpi-size" class="value">-</p>
+            </article>
+            <article class="kpi">
+              <p class="label">Confidence</p>
+              <p id="kpi-confidence" class="value">-</p>
+            </article>
+            <article class="kpi">
+              <p class="label">Fewer Fit Re-dos</p>
+              <p id="kpi-redos" class="value">-</p>
+            </article>
+          </div>
+
+          <div id="friendly-summary" class="friendly-summary"></div>
+
+          <div class="split">
+            <div>
+              <h3>Alteration Plan</h3>
+              <div id="recommendations" class="cards"></div>
+            </div>
+            <aside class="card-note">
+              <h3>Pattern Preview With Highlights</h3>
+              <div class="overlay-card">
+                <img id="overlay-base-image" src="" alt="Selected pattern with highlighted alterations" />
+                <div id="pattern-overlay"></div>
+              </div>
+              <p class="hint">
+                Bright overlays show where the suggested changes happen on the pattern pieces.
+              </p>
+            </aside>
+          </div>
+
+          <h3>Nearest Historical Cases (Synthetic)</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Case ID</th>
+                  <th>Chosen Size</th>
+                  <th>How Well It Fit (0-100)</th>
+                  <th>Key Alterations</th>
+                </tr>
+              </thead>
+              <tbody id="history-body"></tbody>
+            </table>
+          </div>
+
+          <button id="to-approval-btn" type="button">Continue To Approval Step</button>
+        </section>
+
+        <section id="step-approval" class="panel hidden step-page" aria-live="polite">
+          <h3>3) Human Approval</h3>
+          <form id="approval-form">
+            <div class="approval-columns">
+              <section class="approval-column">
+                <h4>Use suggested adjustments</h4>
+                <div id="approval-list" class="approval-list"></div>
+              </section>
+              <section class="approval-column custom-alterations">
+                <h4>Use my own adjustments</h4>
+                <p class="hint">
+                  If you discovered different adjustments while fitting your muslin, add them here.
+                  Matching suggested options will be greyed out automatically.
+                </p>
+                <div class="grid two">
+                  <label>
+                    Alteration Area
+                  <select id="custom-alteration-key"></select>
+                </label>
+                <label>
+                  <span class="field-title" data-unit-base="Amount +/-">Amount (+/- in)</span>
+                  <input id="custom-alteration-amount" type="number" step="0.25" />
+                </label>
+              </div>
+                <button id="add-custom-alteration-btn" type="button">Add My Alteration</button>
+                <div id="custom-alteration-list" class="custom-alteration-list"></div>
+              </section>
+            </div>
+            <label>
+              Notes / Overrides
+              <textarea id="approval-notes" rows="4" placeholder="Example: Keep chest and waist changes, skip sleeve change for now."></textarea>
+            </label>
+            <button type="submit">Save Decision</button>
+          </form>
+          <p id="approval-status" class="hint"></p>
+        </section>
+
+        <section id="step-feedback" class="panel hidden step-page" aria-live="polite">
+          <h3>4) Tell Us How It Went</h3>
+          <form id="feedback-form" class="feedback-form">
+            <p class="hint">Did these recommendations work for your real fitting process?</p>
+            <div class="thumb-row" role="group" aria-label="Outcome rating">
+              <button id="rating-up" class="thumb-btn" type="button" data-rating="up">👍 Worked well</button>
+              <button id="rating-down" class="thumb-btn" type="button" data-rating="down">👎 Did not work</button>
+            </div>
+            <input id="feedback-rating" type="hidden" />
+            <label>
+              How many test versions (muslins) did you sew before getting a fit you liked?
+              <input id="muslin-count" type="number" min="0" max="10" step="1" required />
+            </label>
+            <button type="submit">Send Feedback</button>
+          </form>
+          <p id="feedback-status" class="hint"></p>
+
+          <section id="final-pattern-summary" class="final-summary hidden">
+            <h3>Your Altered Pattern Summary</h3>
+            <p class="hint">
+              This is your finalized version of the pattern based on your approved and custom muslin adjustments.
+            </p>
+            <div class="final-summary-grid">
+              <figure class="pattern-preview">
+                <img id="final-pattern-image" src="" alt="Final altered pattern preview" />
+                <figcaption id="final-pattern-caption"></figcaption>
+              </figure>
+              <div class="summary-card">
+                <p><strong>Pattern:</strong> <span id="final-pattern-name"></span></p>
+                <p><strong>Base Size:</strong> <span id="final-base-size"></span></p>
+                <p><strong>Final Adjustments:</strong></p>
+                <ul id="final-adjustment-list" class="judge-list"></ul>
+                <p><strong>Notes:</strong> <span id="final-notes"></span></p>
+                <button id="save-altered-pattern-btn" type="button">Save Altered Pattern</button>
+                <p id="save-pattern-status" class="hint"></p>
+                <p class="sendoff">Enjoy your new garment and happy stitching with a fit that feels like yours.</p>
+              </div>
+            </div>
+          </section>
+        </section>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

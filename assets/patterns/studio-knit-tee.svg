@@ -1,0 +1,9 @@
+<svg width="640" height="480" viewBox="0 0 640 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="480" fill="#F1F4FA"/>
+  <rect x="56" y="48" width="528" height="384" rx="24" fill="#FFFFFF" stroke="#CBD5EA" stroke-width="2"/>
+  <path d="M250 146L288 126H352L390 146L458 198L424 244L388 216V360H252V216L216 244L182 198L250 146Z" fill="#E8DBFC" stroke="#7A63A5" stroke-width="3"/>
+  <path d="M286 126Q320 172 354 126" stroke="#7A63A5" stroke-width="3"/>
+  <path d="M252 296H388" stroke="#7A63A5" stroke-width="3" stroke-dasharray="8 7"/>
+  <circle cx="320" cy="96" r="24" fill="#D9CBF2" stroke="#7A63A5" stroke-width="3"/>
+  <text x="320" y="445" text-anchor="middle" font-family="Trebuchet MS, sans-serif" font-size="24" fill="#5C4A7C">Studio Knit Tee Pattern</text>
+</svg>
