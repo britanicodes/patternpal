@@ -1,21 +1,10 @@
 # PatternPal MVP: AI Tailor for Sewing Patterns
 
-Prototype web app for an interview challenge:
+Prototype web app for Wealthsimple AI Builder application:
 
 > Design and prototype an AI system that meaningfully expands what a human can do.
 
 This MVP expands a sewist's workflow by converting body measurements + pattern charts into an explainable alteration plan, with human approval before final decisions.
-
-## 4-Day MVP Plan
-
-1. Day 1: Scope + data model  
-   Define 3 patterns, required measurements, alteration vocabulary, and synthetic record schema.
-2. Day 2: Core recommendation logic  
-   Implement size selection, alteration rules, synthetic historical data generation, and nearest-case matching.
-3. Day 3: UI and workflow  
-   Build the website flow: profile input -> recommendations -> case evidence -> human override.
-4. Day 4: Demo hardening  
-   Tune thresholds, test with sample measurement profiles, and prepare interview narrative + metrics.
 
 ## What Is Implemented
 
@@ -47,23 +36,3 @@ This MVP expands a sewist's workflow by converting body measurements + pattern c
 - Historical records are synthetic (`SYN-*`) and deterministic from a seeded generator.
 - In production, synthetic data would be replaced by real fit outcomes and user feedback loops.
 
-## Run Locally
-
-From `/Users/meekybritanico/Development/WS-app`:
-
-```bash
-python3 -m http.server 8000
-```
-
-Then open:
-
-- `http://localhost:8000/index.html`
-
-## Interview Framing
-
-Use this statement:
-
-1. Baseline workflow: manual size-chart interpretation and ad-hoc alteration guesses.
-2. With PatternPal: system proposes alteration actions with evidence and confidence.
-3. Human-in-loop: maker approves/overrides each recommendation.
-4. Impact claim (prototype): fewer fit re-dos, better first-fit confidence, faster prep time.
